@@ -1,13 +1,24 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0, stop = array.length; i < stop; i++ ){
+    for (let j=i+1; j < stop; j++){
+      if (array[i]+array[j] === target) return true
+    }
+  }
+  return false 
 }
 
 /* 
   Write the Big O time complexity of your function here
+
 */
 
 /* 
   Add your pseudocode here
+  Can stop as soon as we find two integers that add to target
+  nested loop taking first integer then comparing to the rest to the right of it
+  then take second integer and compare to the right of it and so on
+  return as soon as we find something viable
+  if done all comparisons and nothing viable then return false
 */
 
 /*
